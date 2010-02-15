@@ -2,4 +2,6 @@
 
 == Feb 15 2010 ==
   * tron-bot-jim project created
-  * are we having fun yet?
+  * "svn checkout" to my laptop
+  * created directories similar to those in python_starter_package.zip
+  * "svn commit -m '...'" : first trial code commit.
