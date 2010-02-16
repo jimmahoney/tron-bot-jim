@@ -1,4 +1,7 @@
 #!/usr/bin/python
+
+# This is a random comment.
+
 import tron, random
 
 def which_move(board):
