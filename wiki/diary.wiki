@@ -1,6 +1,9 @@
 #summary A timeline of notes and site changes.
 
-== Feb 15 2010 ==
+=== Feb 16 2010 ==
+  * added files from python_starter_package after confirming license OK.
+
+=== Feb 15 2010 ===
   * tron-bot-jim project created
   * "svn checkout" to my laptop
   * created directories similar to those in python_starter_package.zip
