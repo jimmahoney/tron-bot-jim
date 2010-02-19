@@ -1,5 +1,13 @@
 #summary A timeline of notes and site changes.
 
+=== Feb 18 2010 ==
+  * added python_tournament_engine after confirming license.
+  * added license
+  * reorganized directory structure
+  * added readme
+  * added cond/environment and "running it" shortcuts.
+  * tagged as v0.2 and added .tar.gz to downloads
+
 === Feb 16 2010 ==
   * added files from python_starter_package after confirming license OK.
 
