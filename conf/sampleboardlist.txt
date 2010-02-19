@@ -8,5 +8,5 @@ Board(2,4,layout=[
     ' #',
     ' #',
     ' 2']),
-BoardFile('sampleboard.txt'),
+BoardFile('maps/empty-room.txt'),
 ]
