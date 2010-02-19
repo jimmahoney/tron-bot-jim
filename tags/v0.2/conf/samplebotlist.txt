@@ -1,0 +1,5 @@
+# ID, Name, Command
+1,northbot,$pybots/northbot.py
+2,randbot,$pybots/randbot.py
+3,wallbot,$pybots/wallbot.py
+4,freebot,$pybots/freebot.py

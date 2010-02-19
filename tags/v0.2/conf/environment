@@ -1,0 +1,19 @@
+
+# This sets up a command line environment.
+# It's designed to be run from the directory above this;
+# see ../_README.txt for the details.
+#
+#   $ . conf/environment
+#   $ tron_example
+#   $ tourney_example
+# 
+
+export tron=engines/python/round.py
+export tourney=engines/python/tournament.py
+export pybots=bots/python
+
+alias tron="$tron "
+alias tourney="$tourney "
+
+alias tron_example="$tron -v -i -B maps/empty-room.txt $pybots/randbot.py $pybots/wallbot.py "
+alias tourney_example="$tourney -v -r 2 conf/samplebotlist.txt conf/sampleboardlist.txt "
