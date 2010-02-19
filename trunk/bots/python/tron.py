@@ -65,6 +65,14 @@ def readline(buf):
     rest = buf[index + 1:]
     return line, rest
 
+class LogFile():
+	""" A log file for storing bot messages. """
+	def __init__(self, name):
+		self.name = name
+		self.file = open(name, 'a')
+		self.file.write("--- tron bot log file --- \n")
+	def log(self, message):
+		self.file.write(message + "\n")
 
 class Board(object):
     """ The Tron Board """
