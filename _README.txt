@@ -36,6 +36,6 @@ in its own folder, and compress it all.
 
 History
 
- v0.11  Feb 18 2010 - infrastructure set up from 
+ v0.2   Feb 18 2010 - infrastructure set up from 
         python_starter_package and python_tournament_engine
 
