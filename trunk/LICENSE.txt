@@ -1,16 +1,22 @@
 
 
-This software is Copyright © 2010, by Jim Mahoney, Marlboro College.
-It is free software; you can redistribute it and/or modify it under the terms of either
+Copyright © 2010, by Jim Mahoney, Marlboro College.
+
+This is free software which you can redistribute
+and/or modify it under the terms of either
+
   a) the Gnu General Public License as published by the Free Software Foundation,
      either version 1 or at hour option any later version, or
+
   b) the Artistic License 2.0 or any later version as published at opensource.org.
 
-This work is based on those described below, which may be found in their 
-original form in the originals/ folder.
+This work is based on others listed below, which may be found 
+in their original form in the originals/ folder.
 
 -----------------------------------------------------------------------------------------
-The python starter package is distributed with this license:
+The python starter package as seen at 
+http://csclub.uwaterloo.ca/contest/starter_packages.php on Feb 18 2010
+is distributed with this license:
   Redistribution and use in source and binary forms, with or without modification, are
   permitted provided that the following conditions are met:
     1. Redistributions of source code must retain the above copyright notice, this list of
@@ -52,3 +58,4 @@ is by Robert Xiao, and is released under a BSD license :
   The views and conclusions contained in the software and documentation are those of the
   authors and should not be interpreted as representing official policies, either expressed
   or implied, of Robert Xiao.
+
