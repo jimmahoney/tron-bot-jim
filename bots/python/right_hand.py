@@ -1,6 +1,7 @@
 #!/usr/bin/python
 """
  Keep your right hand on the wall.
+ This is a minor change, while I'm testing a subversion client.
 """
 
 import random
