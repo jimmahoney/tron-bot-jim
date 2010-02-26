@@ -1,41 +1,33 @@
 #!/usr/bin/python
 """
- Keep your right hand on the wall.
- This is a minor change, while I'm testing a subversion client.
+ right_hand.py 
+ A tron bot whose rule is: keep your right hand on the wall.
+ Jim Mahoney | Feb 2010 | GPL
 """
 
-import random
-from tron import NORTH, SOUTH, EAST, WEST, DIRECTIONS, \
-                 FLOOR, WALL, ME, THEM, Board, move
+# Remember that coordinates are (y,x) with (0,0) at the top left.
 
-rightwards = {NORTH:EAST, EAST:SOUTH, SOUTH:WEST, WEST:NORTH}
-leftwards = {NORTH:WEST, WEST:SOUTH, SOUTH:EAST, EAST:NORTH}
+import random, tron, utilities
 
-me, them = None, None
+# history = utilities.BotHistory()
+debug = utilities.LogFile("logs/right_hand.txt")
 
-
-class BotHistory(object):
-  """ A bot's previous position, direction of motion, etc. """
-  def __init__(self, board, bot, direction=None):
-    self.bot = bot
-    self.position = [board.find(bot)]
-    self.direction = [direction or random.choose(DIRECTIONS)]
-
-
-def init(board):
-  if me:
-    me.update(board)
-    them.update(board)
-  else:
-    me = BotHistory(board, ME)
-    them = BotHistory(board, THEM)
-
+a = [0]
 
 def which_move(board):
-  movingDirection = lastDirection or random.choose(DIRECTIONS)
-  return random.choice(board.moves())
+  debug.log(" a move ... ")
+  a[0] += 1
+  if a[0] > 3: a[0] = 1/0
+  return tron.SOUTH
 
+###
+  # history.update(board)
+  # direction = randomDirection()
+  # debug.log("last, this directions = " + \
+  #             direction2string(direction) + \
+  #             ", " + direction2string(history.lastDirection()))
+  # return direction
 
 # --- main -------------------
-for board in Board.generate():
-  move(which_move(board))
+for board in tron.Board.generate():
+  tron.move(which_move(board))
