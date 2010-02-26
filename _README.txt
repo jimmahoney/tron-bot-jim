@@ -39,3 +39,7 @@ History
  v0.2   Feb 18 2010 - infrastructure set up from 
         python_starter_package and python_tournament_engine
 
+ v0.3   Feb 26 2010 - utilities.py with LogFile, BotHistory class;
+        working right_hand.py bot that can do a maze.
+
+
