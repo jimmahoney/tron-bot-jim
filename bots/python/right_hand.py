@@ -8,7 +8,7 @@
 import random, tron, utilities
 
 history = utilities.BotHistory()
-debug = utilities.LogFile("logs/right_hand.txt")
+debug = utilities.LogFile("logs/right_hand", randomizeName=True)
 
 def lookForWall(board):
   """ Return a move along a right hand wall, or a random move. """
