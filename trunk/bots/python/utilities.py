@@ -1,5 +1,5 @@
 """
- Utility functions and classes for tron bots.
+ Utility classes, functions, and dictionaries for tron bots.
 """
 
 from tron import NORTH, EAST, SOUTH, WEST
@@ -7,7 +7,7 @@ import sys, time
 
 rightwards = {NORTH:EAST, EAST:SOUTH, SOUTH:WEST, WEST:NORTH}
 leftwards = {NORTH:WEST, WEST:SOUTH, SOUTH:EAST, EAST:NORTH}
-vector2direction = {(1,0):NORTH, (0,1):EAST, (-1,0):SOUTH, (0,-1):WEST}
+vector2direction = {(1,0):SOUTH, (0,1):EAST, (-1,0):NORTH, (0,-1):WEST}
 direction2string = {NORTH:'north', EAST:'east', SOUTH:'south', WEST:'west'}
 
 class LogFile():
@@ -34,14 +34,16 @@ class BotHistory(object):
   """
   def __init__(self):
     self.positions = []
-    self.directions = []
   def update(self, board):
     self.positions.append(board.me())
+  def length(self):
+    """ return number of moves stored in history """
+    return len(self.positions)
   def lastDirection(self):
-    if length(self.directions) < 2:
+    if len(self.positions) < 2:
       return NORTH
     else:
-      vector = (self.direction[-2][0] - self.direction[-1][0], 
-                self.direction[-2][1] - self.direction[-1][0])
-      return vector2direction(vector)
+      vector = (self.positions[-1][0] - self.positions[-2][0],
+                self.positions[-1][1] - self.positions[-2][1])
+      return vector2direction.get(vector, '?')
 

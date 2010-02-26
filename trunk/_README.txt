@@ -21,8 +21,8 @@ Run this from the command line in this directory like this :
   $ tron --help              # Get help.
   $ tourney --help           # Ditto.
 
-  # Run two specific robots in a specfic room.
-  $ tron -v -i -B maps/*.txt $pybots/*.py $pybots/*.py
+  # Choose a room and two robots explicitly
+  $ tron -v -i -B maps/empty-room.txt $pybots/randbot.py $pybots/randbot.py
 
 Adapt the templates in the conf/ directory to suit your purposes.
 
