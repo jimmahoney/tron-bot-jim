@@ -1,28 +1,30 @@
 """
 tron.py
 
- Tron bot utilities.
+ Tron bot interface to engine
 
  Usage:
 
-   1. Create bot1.py, bot2,py files, i.e. :
+   1. First create python bot executable files,
+      i.e. bot1.py, bot2.py, looking something like this :
+        # --- bot.py ---
+        import tron
+        def which_move(board):
+          # ... calculate where you want to move, for example
+          return tron.NORTH
+        for board in tron.Board.generate():
+          tron.move(which_move(board))
 
-     # --- bot.py ---
-     import tron
-     def which_move(board):
-       # ... calculate where you want to move, for example
-       return tron.NORTH
-     for board in tron.Board.generate():
-       tron.move(which_move(board))
+   2. Then (assuming all these files are in the same directory),
+      run 'em against each other with one of the engines, e.g.
+        $ java -jar Tron.jar empty-room.txt "bot1.py" "bot2.py"
+      or
+        $ round.py -v -i -B maps/empty-room.txt "bot1.py" "bot2.py"n
 
-   2. Then run 'em against each other :
-
-     $ java -jar engine/Tron.jar " maps/empty-room.txt "bot1.py" "bot2.py"
-
- The java engine communicates to the bot controllers via standard input/output,
+ The engine communicates to the bot controllers via standard input/output,
  sending ascii text versions of the board like the initial maps.
 
- Based closely on provided code for the Python 2.5 starter package from the 
+ This is essentially the provided code for the Python 2.5 starter package from the 
  Tron AI Challenge at http://csclub.uwaterloo.ca/contest/starter_packages.php .
 
  Jim Mahoney, Marlboro College | GPL | Feb 10 2010
@@ -182,6 +184,13 @@ class Board(object):
             return y, x - 1
         else:
             raise KeyError("not a valid direction: %s" % direction)
+
+    def what(self, direction, origin=None):
+        """ Return one of (WALL,FLOOR,ME,THEM) in the given relative direction. 
+            Usage:
+              if board.what(tron.NORTH) == tron.FLOOR: ...
+              """
+        return self.board[self.board.rel(direction, origin)]
 
     def adjacent(self, origin):
         """ Calculate the four tiles that are adjacent to origin.
